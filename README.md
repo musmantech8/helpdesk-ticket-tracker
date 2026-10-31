@@ -9,7 +9,7 @@ An IT helpdesk application built with **Oracle APEX** and **PL/SQL**. Users rais
 - **Agents:** administrator-only management of support agents and their workload.
 - **Status history:** every status change is recorded automatically.
 - **Accounts:** self-service sign-up. The first account becomes the administrator.
-- **Works on phones:** on small screens the side menu opens over the page from the menu button.
+- **Responsive:** works on phones, tablets and desktops. On small screens the side menu opens over the page, page titles and reports fit the screen, and buttons and fields are sized for touch.
 - **SLA due dates:** set automatically from priority (urgent 4 hours, high 24 hours, medium 72 hours, low 120 hours).
 
 ## Business rules
@@ -38,7 +38,7 @@ Passwords are never stored in plain text. Each one is stored as a salted hash.
 
 The APEX application uses a custom authentication scheme (`hdk_auth_pkg.authenticate`) and an *Administration Rights* authorization scheme (`hdk_auth_pkg.is_admin`). The tickets report is filtered by the same rule in the database.
 
-`apex/mobile-nav.css` makes the side menu open over the page on phones and tablets. It goes inside the `<style>` block on the Global Page (page 0).
+`apex/mobile-nav.css` holds the responsive fixes for phones and tablets. It goes inside the `<style>` block on the Global Page (page 0).
 
 ### First run
 
